@@ -34,7 +34,7 @@ const submitHandler = (e) =>{
             setpassword(e.target.value)
           }}
           required className='outline-none bg-transparent border-2 mt-3 border-emerald-600 rounded-full py-2 text-xl px-6 placeholder:text-gray-400 type="password" ' placeholder='Enter your password' />
-          <button className=' mt-7 text-white outline-none bg-transparent w-full hover:bg-emerald-700 border-none bg-emerald-600 rounded-full py-2 text-xl px-6 placeholder:text-white'>Login</button>
+          <button className=' mt-7 text-white outline-none bg-transparent w-full hover:bg-emerald-700 border-none bg-emerald-400 rounded-full py-2 text-xl px-6 placeholder:text-white'>Login</button>
         </form>
       </div>
         
