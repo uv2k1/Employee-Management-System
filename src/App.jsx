@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect ,useState } from 'react'
+import React, { useContext, useEffect ,useState } from 'react'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
 import Login from './components/Auth/Login'
 import { getLocalStorage, setLocalStorage } from './utils/localStorage'
+import { AuthContext } from './context/AuthProvider'
 
 const App = () => {
 
@@ -26,10 +27,13 @@ const App = () => {
       
   }
 
+  const data = useContext(AuthContext)
+  console.log(data)
+
   return (
     <>
     {!user ? <Login handleLogin={handleLogin}/> : ''}
-    {user == 'admin' ? <AdminDashboard /> : <EmployeeDashboard />}
+    {user == 'admin' ? <AdminDashboard /> : <EmployeeDashboard />} 
     </>
   )
 }
